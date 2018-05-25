@@ -1,0 +1,10 @@
+function calculateBillTotal(preTaxAndTipAmount) {
+  const TAX_RATE = .095;
+  const TIP = .15;
+  let totalWithTaxAndTip = 0;
+  
+  return ((TAX_RATE + TIP) * preTaxAndTipAmount) + preTaxAndTipAmount;
+  
+}
+var output = calculateBillTotal(20);
+console.log('output: ', output);
