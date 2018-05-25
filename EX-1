@@ -1,0 +1,29 @@
+//Celsius to fahrenheit
+
+function cToF(celsius) 
+{
+  var cTemp = celsius;
+  var cToF = cTemp * 9 / 5 + 32;
+  var temperature = cTemp+'\xB0C is ' + cToF + ' \xB0F.';
+    console.log(temperature);
+}
+
+function fToC(fahrenheit) 
+{
+  var fTemp = fahrenheit;
+  var fToC = (fTemp - 32) * 5 / 9;
+  var temperature = fTemp+'\xB0F is ' + fToC + '\xB0C.';
+    console.log(temperature);
+} 
+cToF(60);
+fToC(45);
+
+
+
+
+
+
+
+
+
+
