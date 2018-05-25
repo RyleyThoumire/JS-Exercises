@@ -1,0 +1,27 @@
+
+var Game = prompt("How many flips do you want?", "Text goes here");
+
+if (Game !== null) {
+  console.log("Please Input a Number")
+  
+}
+
+
+function flip_coins() {
+    var heads, tails;
+    
+    heads = 0;
+    tails = 0;
+    for (var i=0; i<Game; i++) {
+    	if (Math.random() >= .5) {
+    		heads++;
+    	} else tails ++;
+    }
+
+    
+    console.log("Heads : " + heads);
+    console.log("Tails : " + tails);
+    
+}
+
+flip_coins(); 
