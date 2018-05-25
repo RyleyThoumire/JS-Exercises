@@ -1,0 +1,28 @@
+function flipPairs(str) {
+  //turn string into an array of characters
+  //iterate through the array, every 2 items
+    //set second item equal to a temporary variable
+    //set the first item equal to the second item
+    //set the temporary item equal to the first item
+  //return the array joined together
+  var arr = str.split("");
+  for (var i = 0; i + 1 < arr.length; i += 2) {
+    var temp = arr[i + 1];
+    arr[i + 1] = arr[i];
+    arr[i] = temp;
+  }
+  return arr.join("");
+}
+
+function assertEqual(actual, expected, testName) {
+  if (actual === expected) {
+    console.log("passed");
+  } else {
+  console.log("FAILED [" + testName + "] Expected \"" + expected + "\", but got \"" + actual + "\"");
+  }
+}
+
+var input = "check out how interesting this problem is, it\'s insanely interesting!";
+var output = "hcce kuo toh wnietertsni ghtsip orlbmei ,si 't sniasenyli tnreseitgn!";
+
+assertEqual(flipPairs(input), output, "should flip every pair of characters in a string");
