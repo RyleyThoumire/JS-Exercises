@@ -1,0 +1,44 @@
+
+print('''Enter your new password:
+
+Must contain:
+1. At least eight characters long
+2. Has lower case and upper case letters.
+3. Has numbers and letters.
+''')
+
+y = input('New Password:        ')
+b = input('Enter password again:') 
+
+import re
+
+x = True
+while x:  
+    if (len(y or b)<8 or len(y or b)>16):
+      print("Length needs to be between 8 and 16 characters")
+      break
+    elif not re.search("[a-z]",y or b):
+      print("No lower case letters")  
+      break
+    elif not re.search("[0-9]",y or b):
+      print("No Numbers")  
+      break
+    elif not re.search("[A-Z]",y or b):
+      print("No Capital Letters")  
+      break
+    elif not b == y:
+      print("Passwords Are Different")
+      break 
+    elif re.search("\s",y or b):
+        break
+    else:
+        x = False
+        break
+
+if x == True:
+  print("Not a Valid Password")
+
+if x == False:
+  print("Valid Password")
+
+
