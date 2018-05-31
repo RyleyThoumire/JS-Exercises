@@ -1,0 +1,42 @@
+
+print('''Enter your Email:
+
+Must contain:
+1. No Spaces
+2. Has an @ and a . after it
+''')
+
+y = input('New Email:')
+
+
+import re
+
+x = False
+while x:  
+    if not re.search("[@.]",y:
+        break
+    elif re.search("[ ]"),y:
+        break
+    elif re.search("\s",y):
+        break
+    else:
+        x = True
+        print("Valid Password")  
+        break
+
+if x == False:
+    print("Not a Valid Email")
+
+if x == True:
+  print("Valid Email")
+
+
+
+
+
+
+
+
+
+
+
